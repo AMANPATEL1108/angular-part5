@@ -68,4 +68,19 @@ export class App {
   updatedata() {
     this.x.set(500);
   }
+
+  p = signal(15);
+  q = signal(25);
+  r = computed(() => this.p() + this.q());
+
+  updateper() {
+    this.p.set(100);
+  }
+
+  updateper2() {
+    this.p.set(1000);
+  }
+  updateper3() {
+    this.p.set(10000);
+  }
 }
